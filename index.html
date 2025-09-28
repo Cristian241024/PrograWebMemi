@@ -14,11 +14,11 @@
         <div class="w3-row">
             <div class="w3-col s6 m6 l6">
                 <!-- Logo MEMI - Subir imagen aquí: /assets/images/logo-memi.png -->
-                <img src="assets/images/logo-memi.png" alt="Logo Centro MEMI" class="logo-memi w3-left">
+                <img src="assets/images/LogoMemi.png" alt="Logo Centro MEMI" class="logo-memi w3-left">
             </div>
             <div class="w3-col s6 m6 l6 w3-right-align">
                 <!-- Logo FCyT - Subir imagen aquí: /assets/images/logo-fcyt.png -->
-                <img src="assets/images/logo-fcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt w3-right">
+                <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt w3-right">
             </div>
         </div>
     </header>
@@ -30,20 +30,40 @@
         </button>
         
         <div id="navbar" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium navigation-mobile">
-            <a href="#inicio" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Inicio</a>
-            <a href="#nosotros" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Nosotros</a>
+            <a href="#mision-vision" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Misión Visión Valores</a>
+            <div class="dropdown-mobile">
+                <button class="w3-bar-item w3-button nav-item dropdown-btn" onclick="toggleDropdown('acerca-mobile')">
+                    Acerca de <i class="fas fa-chevron-down"></i>
+                </button>
+                <div id="acerca-mobile" class="dropdown-content-mobile">
+                    <a href="#antecedentes" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Antecedentes</a>
+                    <a href="#datos-historicos" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Datos históricos</a>
+                    <a href="#autoridades" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Autoridades</a>
+                </div>
+            </div>
+            <a href="#cursos-seminarios" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Cursos / Seminarios</a>
+            <a href="#publicaciones" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Publicaciones</a>
             <a href="#servicios" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Servicios</a>
-            <a href="#proyectos" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Proyectos</a>
-            <a href="#investigacion" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Investigación</a>
+            <a href="#icpc-umss" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">ICPC UMSS</a>
             <a href="#contacto" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Contacto</a>
         </div>
 
         <div class="w3-hide-small navigation-desktop">
-            <a href="#inicio" class="w3-bar-item w3-button nav-item">Inicio</a>
-            <a href="#nosotros" class="w3-bar-item w3-button nav-item">Nosotros</a>
+            <a href="#mision-vision" class="w3-bar-item w3-button nav-item">Misión Visión Valores</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button nav-item">
+                    Acerca de <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-content-desktop">
+                    <a href="#antecedentes" class="w3-bar-item w3-button nav-subitem">Antecedentes</a>
+                    <a href="#datos-historicos" class="w3-bar-item w3-button nav-subitem">Datos históricos</a>
+                    <a href="#autoridades" class="w3-bar-item w3-button nav-subitem">Autoridades</a>
+                </div>
+            </div>
+            <a href="#cursos-seminarios" class="w3-bar-item w3-button nav-item">Cursos / Seminarios</a>
+            <a href="#publicaciones" class="w3-bar-item w3-button nav-item">Publicaciones</a>
             <a href="#servicios" class="w3-bar-item w3-button nav-item">Servicios</a>
-            <a href="#proyectos" class="w3-bar-item w3-button nav-item">Proyectos</a>
-            <a href="#investigacion" class="w3-bar-item w3-button nav-item">Investigación</a>
+            <a href="#icpc-umss" class="w3-bar-item w3-button nav-item">ICPC UMSS</a>
             <a href="#contacto" class="w3-bar-item w3-button nav-item">Contacto</a>
         </div>
     </nav>
@@ -101,24 +121,94 @@
 
     <!-- Contenido principal -->
     <main class="w3-container w3-padding-32">
-        <section id="inicio" class="w3-row-padding w3-margin-bottom">
+        <section id="mision-vision" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
-                <h2 class="w3-text-blue section-title">Centro MEMI</h2>
-                <p class="w3-text-grey">El Centro de Micro Electrónica y Microsistemas Integrados (MEMI) de la Facultad de Ciencias y Tecnología de la UMSS es un centro de investigación dedicado al desarrollo de tecnologías avanzadas en microelectrónica.</p>
+                <h2 class="w3-text-blue section-title">Misión, Visión y Valores</h2>
+                <div class="w3-row">
+                    <div class="w3-col m4 w3-padding">
+                        <h4 class="w3-text-red">Misión</h4>
+                        <p>Desarrollar investigación científica y tecnológica en el área de microelectrónica y microsistemas integrados, contribuyendo al desarrollo tecnológico del país.</p>
+                    </div>
+                    <div class="w3-col m4 w3-padding">
+                        <h4 class="w3-text-red">Visión</h4>
+                        <p>Ser un centro de referencia nacional e internacional en investigación y desarrollo de tecnologías microelectrónicas y microsistemas integrados.</p>
+                    </div>
+                    <div class="w3-col m4 w3-padding">
+                        <h4 class="w3-text-red">Valores</h4>
+                        <ul>
+                            <li>Excelencia académica</li>
+                            <li>Innovación tecnológica</li>
+                            <li>Compromiso social</li>
+                            <li>Integridad científica</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="nosotros" class="w3-row-padding w3-margin-bottom">
+        <section id="antecedentes" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
-                <h2 class="w3-text-red section-title">Acerca de Nosotros</h2>
+                <h2 class="w3-text-blue section-title">Antecedentes</h2>
+                <p class="w3-text-grey">El Centro MEMI fue creado con el objetivo de impulsar la investigación en microelectrónica en Bolivia...</p>
+            </div>
+        </section>
+
+        <section id="datos-historicos" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Datos Históricos</h2>
+                <p class="w3-text-grey">Historia y evolución del Centro MEMI a través de los años...</p>
+            </div>
+        </section>
+
+        <section id="autoridades" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Autoridades</h2>
+                <p class="w3-text-grey">Directorio y personal directivo del Centro MEMI...</p>
+            </div>
+        </section>
+
+        <section id="cursos-seminarios" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Cursos / Seminarios</h2>
+                <p class="w3-text-grey">Programas de formación y capacitación especializada...</p>
+            </div>
+        </section>
+
+        <section id="publicaciones" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Publicaciones</h2>
+                <p class="w3-text-grey">Artículos científicos, papers y documentos de investigación...</p>
+            </div>
+        </section>
+
+        <section id="servicios" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Servicios</h2>
+                <p class="w3-text-grey">Servicios técnicos y de consultoría que ofrece el Centro MEMI...</p>
+            </div>
+        </section>
+
+        <section id="icpc-umss" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">ICPC UMSS</h2>
+                <p class="w3-text-grey">Participación en competencias internacionales de programación...</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Contacto</h2>
                 <div class="w3-row">
                     <div class="w3-col m6 w3-padding">
-                        <h4>Misión</h4>
-                        <p>Desarrollar investigación científica y tecnológica en el área de microelectrónica y microsistemas integrados.</p>
+                        <h4>Información de Contacto</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> Dirección: FCyT - UMSS</p>
+                        <p><i class="fas fa-phone"></i> Teléfono: +591 4 4542563</p>
+                        <p><i class="fas fa-envelope"></i> Email: memi@fcyt.umss.edu.bo</p>
                     </div>
                     <div class="w3-col m6 w3-padding">
-                        <h4>Visión</h4>
-                        <p>Ser un centro de referencia nacional en investigación y desarrollo de tecnologías microelectrónicas.</p>
+                        <h4>Horarios de Atención</h4>
+                        <p>Lunes a Viernes: 8:00 - 12:00 y 14:00 - 18:00</p>
+                        <p>Sábados: 8:00 - 12:00</p>
                     </div>
                 </div>
             </div>

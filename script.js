@@ -21,6 +21,39 @@ function toggleMenu() {
 function closeMenu() {
     const navbar = document.getElementById("navbar");
     navbar.className = navbar.className.replace(" w3-show", "");
+    
+    // Cerrar también todos los dropdowns móviles
+    const dropdowns = document.querySelectorAll('.dropdown-content-mobile');
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('show');
+    });
+    
+    const dropdownBtns = document.querySelectorAll('.dropdown-btn');
+    dropdownBtns.forEach(btn => {
+        btn.classList.remove('active');
+    });
+}
+
+// Función para manejar dropdowns móviles
+function toggleDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    const btn = dropdown.previousElementSibling;
+    
+    if (dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+        btn.classList.remove('active');
+    } else {
+        // Cerrar otros dropdowns abiertos
+        const allDropdowns = document.querySelectorAll('.dropdown-content-mobile');
+        const allBtns = document.querySelectorAll('.dropdown-btn');
+        
+        allDropdowns.forEach(d => d.classList.remove('show'));
+        allBtns.forEach(b => b.classList.remove('active'));
+        
+        // Abrir el dropdown actual
+        dropdown.classList.add('show');
+        btn.classList.add('active');
+    }
 }
 
 // Funciones del carrusel
@@ -115,6 +148,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 block: 'start'
             });
         }
+        
+        // Cerrar menú móvil después de hacer clic en un enlace
+        closeMenu();
     });
 });
 
@@ -148,5 +184,27 @@ document.addEventListener('DOMContentLoaded', function() {
             
             this.parentNode.replaceChild(placeholder, this);
         });
+    });
+});
+
+// Destacar elemento del menú activo al hacer scroll
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-item[href^="#"], .nav-subitem[href^="#"]');
+    
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+    
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === '#' + current) {
+            item.classList.add('active');
+        }
     });
 });
