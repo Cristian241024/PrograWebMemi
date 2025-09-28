@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro MEMI - FCyT UMSS</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header con logos -->
+    <header class="w3-container w3-white w3-padding header-container">
+        <div class="w3-row">
+            <div class="w3-col s6 m6 l6">
+                <!-- Logo MEMI - Subir imagen aquí: /assets/images/logo-memi.png -->
+                <img src="assets/images/logo-memi.png" alt="Logo Centro MEMI" class="logo-memi w3-left">
+            </div>
+            <div class="w3-col s6 m6 l6 w3-right-align">
+                <!-- Logo FCyT - Subir imagen aquí: /assets/images/logo-fcyt.png -->
+                <img src="assets/images/logo-fcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt w3-right">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación tipo persiana -->
+    <nav class="w3-bar nav-container">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hide-medium menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <div id="navbar" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium navigation-mobile">
+            <a href="#inicio" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Inicio</a>
+            <a href="#nosotros" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Nosotros</a>
+            <a href="#servicios" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Servicios</a>
+            <a href="#proyectos" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Proyectos</a>
+            <a href="#investigacion" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Investigación</a>
+            <a href="#contacto" class="w3-bar-item w3-button nav-item" onclick="closeMenu()">Contacto</a>
+        </div>
+
+        <div class="w3-hide-small navigation-desktop">
+            <a href="#inicio" class="w3-bar-item w3-button nav-item">Inicio</a>
+            <a href="#nosotros" class="w3-bar-item w3-button nav-item">Nosotros</a>
+            <a href="#servicios" class="w3-bar-item w3-button nav-item">Servicios</a>
+            <a href="#proyectos" class="w3-bar-item w3-button nav-item">Proyectos</a>
+            <a href="#investigacion" class="w3-bar-item w3-button nav-item">Investigación</a>
+            <a href="#contacto" class="w3-bar-item w3-button nav-item">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Carrusel de avisos -->
+    <section class="carousel-container">
+        <div class="w3-content w3-display-container carousel-wrapper">
+            <div class="carousel-slide w3-display-container">
+                <!-- Imagen 1 del carrusel - Subir aquí: /assets/images/carousel/slide1.jpg -->
+                <img src="assets/images/carousel/slide1.jpg" alt="Aviso 1" class="carousel-image">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
+                    <h3>Bienvenidos al Centro MEMI</h3>
+                    <p>Centro de Micro Electrónica y Microsistemas Integrados</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide w3-display-container">
+                <!-- Imagen 2 del carrusel - Subir aquí: /assets/images/carousel/slide2.jpg -->
+                <img src="assets/images/carousel/slide2.jpg" alt="Aviso 2" class="carousel-image">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
+                    <h3>Investigación de Vanguardia</h3>
+                    <p>Desarrollamos tecnología de punta en microelectrónica</p>
+                </div>
+            </div>
+            
+            <div class="carousel-slide w3-display-container">
+                <!-- Imagen 3 del carrusel - Subir aquí: /assets/images/carousel/slide3.jpg -->
+                <img src="assets/images/carousel/slide3.jpg" alt="Aviso 3" class="carousel-image">
+                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
+                    <h3>Formación Académica</h3>
+                    <p>Programas de posgrado y capacitación especializada</p>
+                </div>
+            </div>
+
+            <!-- Controles del carrusel -->
+            <button class="w3-button w3-black w3-display-left carousel-btn" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right carousel-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Indicadores del carrusel -->
+        <div class="w3-center w3-container w3-section carousel-indicators">
+            <div class="w3-left-align w3-row-padding">
+                <div class="w3-col s4">
+                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(1)"></button>
+                </div>
+                <div class="w3-col s4">
+                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(2)"></button>
+                </div>
+                <div class="w3-col s4">
+                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(3)"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenido principal -->
+    <main class="w3-container w3-padding-32">
+        <section id="inicio" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Centro MEMI</h2>
+                <p class="w3-text-grey">El Centro de Micro Electrónica y Microsistemas Integrados (MEMI) de la Facultad de Ciencias y Tecnología de la UMSS es un centro de investigación dedicado al desarrollo de tecnologías avanzadas en microelectrónica.</p>
+            </div>
+        </section>
+
+        <section id="nosotros" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-red section-title">Acerca de Nosotros</h2>
+                <div class="w3-row">
+                    <div class="w3-col m6 w3-padding">
+                        <h4>Misión</h4>
+                        <p>Desarrollar investigación científica y tecnológica en el área de microelectrónica y microsistemas integrados.</p>
+                    </div>
+                    <div class="w3-col m6 w3-padding">
+                        <h4>Visión</h4>
+                        <p>Ser un centro de referencia nacional en investigación y desarrollo de tecnologías microelectrónicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-container footer-container w3-padding-32">
+        <div class="w3-row-padding">
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Contacto</h4>
+                <p class="w3-text-white">
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:memi@fcyt.umss.edu.bo" class="footer-link">memi@fcyt.umss.edu.bo</a>
+                </p>
+            </div>
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Síguenos</h4>
+                <p>
+                    <a href="https://www.facebook.com/memiumss/?locale=es_LA" target="_blank" class="footer-link">
+                        <i class="fab fa-facebook-f w3-xlarge"></i> Facebook
+                    </a>
+                </p>
+            </div>
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Enlaces</h4>
+                <p>
+                    <a href="https://fcyt.umss.edu.bo" target="_blank" class="footer-link">
+                        <i class="fas fa-external-link-alt"></i> Web FCyT
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="w3-center w3-padding-16">
+            <p class="w3-text-white">&copy; 2024 Centro MEMI - FCyT UMSS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
