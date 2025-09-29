@@ -12,13 +12,22 @@
     <!-- Header con logos -->
     <header class="w3-container w3-white w3-padding header-container">
         <div class="w3-row">
-            <div class="w3-col s6 m6 l6">
+            <div class="w3-col s3 m3 l3">
                 <!-- Logo MEMI - Subir imagen aquí: /assets/images/logo-memi.png -->
                 <img src="assets/images/LogoMemi.png" alt="Logo Centro MEMI" class="logo-memi w3-left">
             </div>
-            <div class="w3-col s6 m6 l6 w3-right-align">
+            <div class="w3-col s6 m6 l6 w3-center">
+                <!-- Logo Central SANSI y texto Centro MEMI -->
+                <div class="logo-central-container">
+                    <img src="assets/images/logo sansi.png" alt="Logo SANSI" class="logo-sansi">
+                    <h1 class="centro-memi-title">CENTRO MEMI</h1>
+                </div>
+            </div>
+            <div class="w3-col s3 m3 l3">
                 <!-- Logo FCyT - Subir imagen aquí: /assets/images/logo-fcyt.png -->
-                <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt w3-right">
+                <div class="w3-right">
+                    <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt">
+                </div>
             </div>
         </div>
     </header>
@@ -72,17 +81,18 @@
     <section class="carousel-container">
         <div class="w3-content w3-display-container carousel-wrapper">
             <div class="carousel-slide w3-display-container">
-                <!-- Imagen 1 del carrusel - Subir aquí: /assets/images/carousel/slide1.jpg -->
-                <img src="assets/images/carousel/slide1.jpg" alt="Aviso 1" class="carousel-image">
-                <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
-                    <h3>Bienvenidos al Centro MEMI</h3>
-                    <p>Centro de Micro Electrónica y Microsistemas Integrados</p>
+                <!-- Slide de bienvenida -->
+                <div class="welcome-slide">
+                    <div class="welcome-content">
+                        <h2 class="welcome-title">Bienvenidos al Centro MEMI</h2>
+                        <p class="welcome-subtitle">Centro de investigación y desarrollo de tecnologías para la educación</p>
+                    </div>
                 </div>
             </div>
             
             <div class="carousel-slide w3-display-container">
-                <!-- Imagen 2 del carrusel - Subir aquí: /assets/images/carousel/slide2.jpg -->
-                <img src="assets/images/carousel/slide2.jpg" alt="Aviso 2" class="carousel-image">
+                <!-- Imagen 2 del carrusel -->
+                <img src="assets/images/carousel/anuncio-1.png" alt="Aviso 2" class="carousel-image">
                 <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
                     <h3>Investigación de Vanguardia</h3>
                     <p>Desarrollamos tecnología de punta en microelectrónica</p>
@@ -90,8 +100,8 @@
             </div>
             
             <div class="carousel-slide w3-display-container">
-                <!-- Imagen 3 del carrusel - Subir aquí: /assets/images/carousel/slide3.jpg -->
-                <img src="assets/images/carousel/slide3.jpg" alt="Aviso 3" class="carousel-image">
+                <!-- Imagen 3 del carrusel -->
+                <img src="assets/images/carousel/anuncio-2.png" alt="Aviso 3" class="carousel-image">
                 <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small carousel-caption">
                     <h3>Formación Académica</h3>
                     <p>Programas de posgrado y capacitación especializada</p>
@@ -107,13 +117,13 @@
         <div class="w3-center w3-container w3-section carousel-indicators">
             <div class="w3-left-align w3-row-padding">
                 <div class="w3-col s4">
-                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(1)"></button>
+                    <button class="carousel-indicator carousel-indicator-small w3-button w3-hover-white" onclick="currentSlide(1)"></button>
                 </div>
                 <div class="w3-col s4">
-                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(2)"></button>
+                    <button class="carousel-indicator carousel-indicator-small w3-button w3-hover-white" onclick="currentSlide(2)"></button>
                 </div>
                 <div class="w3-col s4">
-                    <button class="carousel-indicator w3-button w3-hover-white" onclick="currentSlide(3)"></button>
+                    <button class="carousel-indicator carousel-indicator-small w3-button w3-hover-white" onclick="currentSlide(3)"></button>
                 </div>
             </div>
         </div>
@@ -243,7 +253,7 @@
             </div>
         </div>
         <div class="w3-center w3-padding-16">
-            <p class="w3-text-white">&copy; 2024 Centro MEMI - FCyT UMSS. Todos los derechos reservados.</p>
+            <p class="w3-text-white">&copy; 2025 Centro MEMI - FCyT UMSS. Todos los derechos reservados.</p>
         </div>
     </footer>
 
