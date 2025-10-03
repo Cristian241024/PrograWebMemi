@@ -24,22 +24,27 @@ body {
     min-height: 80px;
     display: flex;
     align-items: center;
+    width: 100%;
+    padding: 10px 16px !important;
+    margin: 0;
 }
 
-.logo-memi, .logo-fcyt {
+.logo-memi, .logo-fcyt, .logo-sansi {
+    max-width: 100%;
+    height: auto;
     max-height: 60px;
-    width: auto;
-    margin: 10px;
     display: block;
+    margin: 0 auto;
 }
 
-.logo-memi {
+/* Remove float properties to center logos */
+/* .logo-memi {
     float: left;
 }
 
 .logo-fcyt {
     float: right;
-}
+} */
 
 /* Logo central SANSI y título */
 .logo-central-container {
@@ -71,6 +76,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .menu-toggle {
@@ -268,33 +274,140 @@ main {
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: bold;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 10px;
 }
 
 /* Footer */
 .footer-container {
     background-color: var(--color-azul) !important;
     margin-top: 40px;
+    color: white;
 }
 
 .footer-link {
-    color: var(--color-blanco) !important;
+    color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: var(--color-rojo) !important;
+    text-decoration: underline;
+}
+
+/* Organigrama styles */
+.organigrama-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.org-level {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+}
+
+.org-box {
+    background-color: var(--color-blanco);
+    border: 2px solid var(--color-azul);
+    padding: 10px 15px;
+    text-align: center;
+    min-width: 150px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: var(--color-azul);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.org-box.decanato {
+    background-color: var(--color-rojo);
+    color: var(--color-blanco);
+    border-color: var(--color-rojo);
+}
+
+.org-box.directorio {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+.org-box.director {
+    background-color: #00A693;
+    color: var(--color-blanco);
+    border-color: #00A693;
+}
+
+.org-line {
+    width: 2px;
+    height: 20px;
+    background-color: var(--color-azul);
+    margin: 0 auto;
+}
+
+.org-line-horizontal {
+    height: 2px;
+    background-color: var(--color-azul);
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+}
+
+.org-coordinadores {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.org-asistentes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.org-docentes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.org-box.asistente {
+    background-color: #f0f8ff;
+    border-color: #4682b4;
+    color: #4682b4;
+}
+
+.org-box.docentes {
+    background-color: #f5f5f5;
+    border: 2px dashed var(--color-gris);
+    color: var(--color-gris);
+    font-style: italic;
 }
 
 /* Responsive - Tablet y Desktop */
 @media (min-width: 601px) {
     .header-container {
         min-height: 100px;
+        padding: 16px 24px !important;
     }
     
-    .logo-memi, .logo-fcyt {
+    .logo-memi, .logo-fcyt, .logo-sansi {
         max-height: 80px;
-        margin: 15px;
     }
     
     .logo-sansi {
@@ -303,7 +416,7 @@ main {
     }
     
     .centro-memi-title {
-        font-size: 20px;
+        font-size: 18px;
     }
     
     .carousel-wrapper {
@@ -311,11 +424,11 @@ main {
     }
     
     .welcome-title {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .welcome-subtitle {
-        font-size: 22px;
+        font-size: 18px;
     }
 }
 
@@ -334,11 +447,11 @@ main {
     }
     
     .welcome-title {
-        font-size: 42px;
+        font-size: 48px;
     }
     
     .welcome-subtitle {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 

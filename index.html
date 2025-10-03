@@ -12,9 +12,9 @@
     <!-- Header con logos -->
     <header class="w3-container w3-white w3-padding header-container">
         <div class="w3-row">
-            <div class="w3-col s3 m3 l3">
+            <div class="w3-col s3 m3 l3 w3-center">
                 <!-- Logo MEMI - Subir imagen aquí: /assets/images/logo-memi.png -->
-                <img src="assets/images/LogoMemi.png" alt="Logo Centro MEMI" class="logo-memi w3-left">
+                <img src="assets/images/LogoMemi.png" alt="Logo Centro MEMI" class="logo-memi">
             </div>
             <div class="w3-col s6 m6 l6 w3-center">
                 <!-- Logo Central SANSI y texto Centro MEMI -->
@@ -23,11 +23,9 @@
                     <h1 class="centro-memi-title">CENTRO MEMI</h1>
                 </div>
             </div>
-            <div class="w3-col s3 m3 l3">
+            <div class="w3-col s3 m3 l3 w3-center">
                 <!-- Logo FCyT - Subir imagen aquí: /assets/images/logo-fcyt.png -->
-                <div class="w3-right">
-                    <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt">
-                </div>
+                <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt">
             </div>
         </div>
     </header>
@@ -47,6 +45,7 @@
                 <div id="acerca-mobile" class="dropdown-content-mobile">
                     <a href="#antecedentes" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Antecedentes</a>
                     <a href="#datos-historicos" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Datos históricos</a>
+                    <a href="#organigrama" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Organigrama</a>
                     <a href="#autoridades" class="w3-bar-item w3-button nav-subitem" onclick="closeMenu()">Autoridades</a>
                 </div>
             </div>
@@ -66,6 +65,7 @@
                 <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-content-desktop">
                     <a href="#antecedentes" class="w3-bar-item w3-button nav-subitem">Antecedentes</a>
                     <a href="#datos-historicos" class="w3-bar-item w3-button nav-subitem">Datos históricos</a>
+                    <a href="#organigrama" class="w3-bar-item w3-button nav-subitem">Organigrama</a>
                     <a href="#autoridades" class="w3-bar-item w3-button nav-subitem">Autoridades</a>
                 </div>
             </div>
@@ -173,7 +173,108 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
         <section id="datos-historicos" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
                 <h2 class="w3-text-blue section-title">Datos Históricos</h2>
-                <p class="w3-text-grey">Historia y evolución del Centro MEMI a través de los años...</p>
+                <div class="w3-row">
+                    <div class="w3-col m12 w3-padding">
+                        <h4 class="w3-text-red">Cronología del Centro MEMI</h4>
+                        <div class="w3-container w3-margin-bottom">
+                            <h5><strong>1991 - Primera Fase</strong></h5>
+                            <p class="w3-text-grey">Inicio del Programa MEMI con enfoque en tres áreas principales: Matemáticas universitarias, Matemáticas de ciclo medio e Informática universitaria.</p>
+                        </div>
+                        <div class="w3-container w3-margin-bottom">
+                            <h5><strong>1994-1997 - Segunda Fase</strong></h5>
+                            <p class="w3-text-grey">Implementación de los primeros programas de posgrado en San Simón en las áreas de Matemática e Informática, marcando un hito en la educación superior de la región.</p>
+                        </div>
+                        <div class="w3-container w3-margin-bottom">
+                            <h5><strong>1999-2003 - Tercera Fase</strong></h5>
+                            <p class="w3-text-grey">Período de consolidación y garantía de sostenibilidad del programa, cumpliendo compromisos con cooperantes internacionales (NUFFIC y Universidad de Utrecht).</p>
+                        </div>
+                        <div class="w3-container w3-margin-bottom">
+                            <h5><strong>2010 - Transformación en Centro</strong></h5>
+                            <p class="w3-text-grey">Mediante Resolución Rectoral N° 389/10, el Programa MEMI se constituye oficialmente como Centro de Mejoramiento de la Enseñanza de la Matemática e Informática.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organigrama" class="w3-row-padding w3-margin-bottom">
+            <div class="w3-container">
+                <h2 class="w3-text-blue section-title">Organigrama</h2>
+                <div class="organigrama-container">
+                    <div class="org-chart">
+                        <!-- Decanato FCyT -->
+                        <div class="org-level">
+                            <div class="org-box decanato">
+                                FCyT<br>DECANATO
+                            </div>
+                        </div>
+                        
+                        <div class="org-line"></div>
+                        
+                        <!-- Directorio -->
+                        <div class="org-level">
+                            <div class="org-box directorio">
+                                DIRECTORIO
+                            </div>
+                        </div>
+                        
+                        <div class="org-line"></div>
+                        
+                        <!-- Director del Centro MEMI -->
+                        <div class="org-level">
+                            <div class="org-box director">
+                                DIRECTOR DEL<br>CENTRO MEMI
+                            </div>
+                        </div>
+                        
+                        <div class="org-line"></div>
+                        
+                        <!-- Secretaria -->
+                        <div class="org-level" style="position: relative;">
+                            <div class="org-line-horizontal" style="width: 200px;"></div>
+                            <div class="org-box" style="position: absolute; right: 0; top: -20px;">
+                                SECRETARIA
+                            </div>
+                        </div>
+                        
+                        <div class="org-line"></div>
+                        
+                        <!-- Coordinadores y Portero -->
+                        <div class="org-level">
+                            <div class="org-coordinadores">
+                                <div class="org-box">
+                                    COORDINADOR<br>ÁREA MATEMÁTICA
+                                </div>
+                                <div class="org-box">
+                                    COORDINADOR<br>ÁREA INFORMÁTICA
+                                </div>
+                                <div class="org-box">
+                                    PORTERO<br>MENSAJERO
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Asistentes -->
+                        <div class="org-asistentes">
+                            <div class="org-box asistente">
+                                ASISTENTE ÁREA<br>MATEMÁTICA
+                            </div>
+                            <div class="org-box asistente">
+                                ASISTENTE ÁREA<br>INFORMÁTICA
+                            </div>
+                        </div>
+                        
+                        <!-- Docentes Investigadores -->
+                        <div class="org-docentes">
+                            <div class="org-box docentes">
+                                DOCENTES<br>INVESTIGADORES
+                            </div>
+                            <div class="org-box docentes">
+                                DOCENTES<br>INVESTIGADORES
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
