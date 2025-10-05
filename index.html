@@ -201,76 +201,15 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
             <div class="w3-container">
                 <h2 class="w3-text-blue section-title">Organigrama</h2>
                 <div class="organigrama-container">
-                    <div class="org-chart">
-                        <!-- Decanato FCyT -->
-                        <div class="org-level">
-                            <div class="org-box decanato">
-                                FCyT<br>DECANATO
-                            </div>
-                        </div>
-                        
-                        <div class="org-line"></div>
-                        
-                        <!-- Directorio -->
-                        <div class="org-level">
-                            <div class="org-box directorio">
-                                DIRECTORIO
-                            </div>
-                        </div>
-                        
-                        <div class="org-line"></div>
-                        
-                        <!-- Director del Centro MEMI -->
-                        <div class="org-level">
-                            <div class="org-box director">
-                                DIRECTOR DEL<br>CENTRO MEMI
-                            </div>
-                        </div>
-                        
-                        <div class="org-line"></div>
-                        
-                        <!-- Secretaria -->
-                        <div class="org-level" style="position: relative;">
-                            <div class="org-line-horizontal" style="width: 200px;"></div>
-                            <div class="org-box" style="position: absolute; right: 0; top: -20px;">
-                                SECRETARIA
-                            </div>
-                        </div>
-                        
-                        <div class="org-line"></div>
-                        
-                        <!-- Coordinadores y Portero -->
-                        <div class="org-level">
-                            <div class="org-coordinadores">
-                                <div class="org-box">
-                                    COORDINADOR<br>ÁREA MATEMÁTICA
-                                </div>
-                                <div class="org-box">
-                                    COORDINADOR<br>ÁREA INFORMÁTICA
-                                </div>
-                                <div class="org-box">
-                                    PORTERO<br>MENSAJERO
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Asistentes -->
-                        <div class="org-asistentes">
-                            <div class="org-box asistente">
-                                ASISTENTE ÁREA<br>MATEMÁTICA
-                            </div>
-                            <div class="org-box asistente">
-                                ASISTENTE ÁREA<br>INFORMÁTICA
-                            </div>
-                        </div>
-                        
-                        <!-- Docentes Investigadores -->
-                        <div class="org-docentes">
-                            <div class="org-box docentes">
-                                DOCENTES<br>INVESTIGADORES
-                            </div>
-                            <div class="org-box docentes">
-                                DOCENTES<br>INVESTIGADORES
+                    <div class="organigrama-image-container">
+                        <img src="assets/images/organigramaMemi.png" alt="Organigrama Centro MEMI" class="organigrama-image" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="organigrama-placeholder" style="display: none;">
+                            <i class="fas fa-sitemap"></i>
+                            <div>
+                                <strong>Organigrama Centro MEMI</strong>
+                                <p>Estructura organizacional del Centro MEMI</p>
+                                <small>Verifique que la imagen esté en: assets/images/organigramaMemi.png</small>
                             </div>
                         </div>
                     </div>
@@ -352,11 +291,13 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
         <section id="servicios" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
                 <h2 class="w3-text-blue section-title">Servicios</h2>
-                <p class="w3-text-grey w3-large" style="margin-bottom: 30px;"><strong>Los servicios que prestamos son:</strong></p>
+                <p class="w3-text-grey w3-large w3-center" style="margin-bottom: 40px;">
+                    <strong>Los servicios que prestamos son:</strong>
+                </p>
                 
                 <div class="servicios-grid">
                     <!-- Servicio 1: Cursos de formación -->
-                    <div class="servicio-card">
+                    <div class="servicio-card w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <div class="servicio-header formacion">
                             <h4>
                                 <i class="fas fa-chalkboard-teacher"></i>
@@ -371,7 +312,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                     </div>
 
                     <!-- Servicio 2: Cursos de actualización -->
-                    <div class="servicio-card">
+                    <div class="servicio-card w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <div class="servicio-header actualizacion">
                             <h4>
                                 <i class="fas fa-user-graduate"></i>
@@ -386,11 +327,11 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                     </div>
 
                     <!-- Servicio 3: Asesoramiento -->
-                    <div class="servicio-card">
+                    <div class="servicio-card w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <div class="servicio-header asesoramiento">
                             <h4>
                                 <i class="fas fa-hands-helping"></i>
-                                <span>Asesoramiento in la enseñanza de las Matemáticas e Informática</span>
+                                <span>Asesoramiento en la enseñanza de las Matemáticas e Informática</span>
                             </h4>
                         </div>
                         <div class="servicio-content">
@@ -401,7 +342,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                     </div>
 
                     <!-- Servicio 4: Conferencias y seminarios -->
-                    <div class="servicio-card">
+                    <div class="servicio-card w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <div class="servicio-header conferencias">
                             <h4>
                                 <i class="fas fa-microphone"></i>
@@ -412,18 +353,18 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                             <p class="servicio-description">
                                 Facilitamos nuestros ambientes e infraestructura para conferencias, seminarios, talleres, conversatorios con profesionales destacados locales o extranjeros, que quieran compartir sus experiencias y conocimientos con profesionales y estudiantes de nuestra universidad.
                             </p>
-                            <div class="servicio-features">
-                                <p>Disponemos de:</p>
+                            <div class="servicio-features w3-panel">
+                                <p><i class="fas fa-star w3-text-amber"></i> Disponemos de:</p>
                                 <div class="feature-list">
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-users"></i>
                                         <span>Dos salas de 40 personas c/u</span>
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-desktop"></i>
                                         <span>Data display</span>
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-chalkboard"></i>
                                         <span>Pizarras equipadas</span>
                                     </div>
@@ -433,7 +374,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                     </div>
 
                     <!-- Servicio 5: Alquiler de ambientes -->
-                    <div class="servicio-card">
+                    <div class="servicio-card w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <div class="servicio-header alquiler">
                             <h4>
                                 <i class="fas fa-building"></i>
@@ -444,18 +385,18 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                             <p class="servicio-description">
                                 Disponemos de dos ambientes cómodos para defensas públicas, cursos, seminarios, talleres, de carácter privado, con todo el equipamiento para el éxito de sus eventos.
                             </p>
-                            <div class="servicio-features">
-                                <p>Incluye:</p>
+                            <div class="servicio-features w3-panel">
+                                <p><i class="fas fa-check-circle w3-text-green"></i> Incluye:</p>
                                 <div class="feature-list">
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-check-circle"></i>
                                         <span>Capacidad: 40 personas</span>
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-check-circle"></i>
                                         <span>Equipamiento completo</span>
                                     </div>
-                                    <div class="feature-item">
+                                    <div class="feature-item w3-tag w3-white w3-border">
                                         <i class="fas fa-check-circle"></i>
                                         <span>Ambientes privados</span>
                                     </div>
@@ -556,6 +497,65 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
 
                     <!-- Mapa de Ubicación -->
                     <div class="mapa-container">
+                        <div class="mapa-header">
+                            <h4>
+                                <i class="fas fa-map"></i>
+                                Ubicación - Campus Central UMSS
+                            </h4>
+                        </div>
+                        <div class="mapa-content">
+                            <img src="assets/images/mapa-ubicacion.jpg" alt="Mapa de ubicación Centro MEMI" class="mapa-image" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="mapa-placeholder" style="display: none;">
+                                <i class="fas fa-map-marked-alt"></i>
+                                <div>
+                                    <strong>Mapa de Ubicación</strong>
+                                    <p>Campus Central UMSS - Edificio MEMI</p>
+                                    <small>Suba la imagen del mapa a: assets/images/mapa-ubicacion.jpg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w3-container footer-container w3-padding-32">
+        <div class="w3-row-padding">
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Contacto</h4>
+                <p class="w3-text-white">
+                    <i class="fas fa-envelope"></i> 
+                    <a href="mailto:memi@fcyt.umss.edu.bo" class="footer-link">memi@fcyt.umss.edu.bo</a>
+                </p>
+            </div>
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Síguenos</h4>
+                <p>
+                    <a href="https://www.facebook.com/memiumss/?locale=es_LA" target="_blank" class="footer-link">
+                        <i class="fab fa-facebook-f w3-xlarge"></i> Facebook
+                    </a>
+                </p>
+            </div>
+            <div class="w3-col s12 m4 l4 w3-center">
+                <h4 class="w3-text-white">Enlaces</h4>
+                <p>
+                    <a href="https://fcyt.umss.edu.bo" target="_blank" class="footer-link">
+                        <i class="fas fa-external-link-alt"></i> Web FCyT
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="w3-center w3-padding-16">
+            <p class="w3-text-white">&copy; 2025 Centro MEMI - FCyT UMSS. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
                         <div class="mapa-header">
                             <h4>
                                 <i class="fas fa-map"></i>
