@@ -12,19 +12,19 @@
     <!-- Header con logos -->
     <header class="w3-container w3-white w3-padding header-container">
         <div class="w3-row">
-            <div class="w3-col s3 m3 l3 w3-center">
-                <!-- Logo MEMI - Subir imagen aquí: /assets/images/logo-memi.png -->
+            <div class="w3-col s3 m3 l3">
+                <!-- Logo MEMI - Siempre a la izquierda -->
                 <img src="assets/images/LogoMemi.png" alt="Logo Centro MEMI" class="logo-memi">
             </div>
-            <div class="w3-col s6 m6 l6 w3-center">
-                <!-- Logo Central SANSI y texto Centro MEMI -->
+            <div class="w3-col s6 m6 l6">
+                <!-- Logo Central SANSI y texto Centro MEMI - Siempre centrado -->
                 <div class="logo-central-container">
                     <img src="assets/images/logo sansi.png" alt="Logo SANSI" class="logo-sansi">
                     <h1 class="centro-memi-title">CENTRO MEMI</h1>
                 </div>
             </div>
-            <div class="w3-col s3 m3 l3 w3-center">
-                <!-- Logo FCyT - Subir imagen aquí: /assets/images/logo-fcyt.png -->
+            <div class="w3-col s3 m3 l3">
+                <!-- Logo FCyT - Siempre a la derecha -->
                 <img src="assets/images/LogoFcyt.png" alt="Logo FCyT UMSS" class="logo-fcyt">
             </div>
         </div>
@@ -220,54 +220,59 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
         <section id="autoridades" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
                 <h2 class="w3-text-blue section-title">Autoridades</h2>
-                <p class="w3-text-grey w3-large" style="margin-bottom: 30px;">Conoce a nuestro equipo directivo del Centro MEMI</p>
+                <p class="w3-text-grey w3-large w3-center" style="margin-bottom: 40px;">
+                    <strong>Conoce a nuestro equipo directivo del Centro MEMI</strong>
+                </p>
                 
                 <div class="autoridades-grid">
                     <!-- Director Centro MEMI -->
-                    <div class="autoridad-card director">
+                    <div class="autoridad-card director w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <img src="assets/images/autoridades/director.jpg" alt="Mgr. Kirt Rolando Jaldín Rosales" class="autoridad-foto" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="autoridad-foto-placeholder" style="display: none;">
+                            <i class="fas fa-user-circle"></i>
                             <div>
-                                <i class="fas fa-user-circle"></i>
-                                <br>Foto próximamente
+                                <strong>Foto próximamente</strong>
+                                <small>Director Centro MEMI</small>
                             </div>
                         </div>
                         <div class="autoridad-info">
                             <h3 class="autoridad-nombre">Mgr. Kirt Rolando Jaldín Rosales</h3>
-                            <p class="autoridad-cargo">Director Centro MEMI</p>
+                            <p class="autoridad-cargo w3-tag">Director Centro MEMI</p>
                         </div>
                     </div>
 
                     <!-- Coordinador Área Matemática -->
-                    <div class="autoridad-card coordinador-matematica">
+                    <div class="autoridad-card coordinador-matematica w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <img src="assets/images/autoridades/coordinador-matematica.jpg" alt="Mgr. Luis Roberto Zegarra Dorado" class="autoridad-foto" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="autoridad-foto-placeholder" style="display: none;">
+                            <i class="fas fa-user-circle"></i>
                             <div>
-                                <i class="fas fa-user-circle"></i>
-                                <br>Foto próximamente
+                                <strong>Foto próximamente</strong>
+                                <small>Coordinador Matemática</small>
                             </div>
                         </div>
                         <div class="autoridad-info">
                             <h3 class="autoridad-nombre">Mgr. Luis Roberto Zegarra Dorado</h3>
-                            <p class="autoridad-cargo">Coordinador Área Matemática</p>
+                            <p class="autoridad-cargo w3-tag">Coordinador Área Matemática</p>
                         </div>
                     </div>
 
                     <!-- Coordinador Área Informática -->
-                    <div class="autoridad-card coordinador-informatica">
+                    <div class="autoridad-card coordinador-informatica w3-card-4 w3-round-large w3-hover-shadow w3-animate-opacity">
                         <img src="assets/images/autoridades/coordinador-informatica.jpg" alt="Mgr. Jorge Orellana Araoz" class="autoridad-foto" 
                              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                         <div class="autoridad-foto-placeholder" style="display: none;">
+                            <i class="fas fa-user-circle"></i>
                             <div>
-                                <i class="fas fa-user-circle"></i>
-                                <br>Foto próximamente
+                                <strong>Foto próximamente</strong>
+                                <small>Coordinador Informática</small>
                             </div>
                         </div>
                         <div class="autoridad-info">
                             <h3 class="autoridad-nombre">Mgr. Jorge Orellana Araoz</h3>
-                            <p class="autoridad-cargo">Coordinador Área Informática</p>
+                            <p class="autoridad-cargo w3-tag">Coordinador Área Informática</p>
                         </div>
                     </div>
                 </div>
@@ -331,7 +336,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                         <div class="servicio-header asesoramiento">
                             <h4>
                                 <i class="fas fa-hands-helping"></i>
-                                <span>Asesoramiento en la enseñanza de las Matemáticas e Informática</span>
+                                <span>Asesoramiento in la enseñanza de las Matemáticas e Informática</span>
                             </h4>
                         </div>
                         <div class="servicio-content">
@@ -556,11 +561,6 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
     <script src="script.js"></script>
 </body>
 </html>
-                        <div class="mapa-header">
-                            <h4>
-                                <i class="fas fa-map"></i>
-                                Ubicación - Campus Central UMSS
-                            </h4>
                         </div>
                         <div class="mapa-content">
                             <img src="assets/images/mapa-ubicacion.jpg" alt="Mapa de ubicación Centro MEMI" class="mapa-image" 
