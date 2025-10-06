@@ -43,18 +43,6 @@ body {
     margin-bottom: 5px;
 }
 
-/* Logo MEMI - always on the left */
-.logo-memi {
-    margin-left: 0;
-    margin-right: auto;
-}
-
-/* Logo FCyT - always on the right */
-.logo-fcyt {
-    margin-left: auto;
-    margin-right: 0;
-}
-
 /* Logo central SANSI y título */
 .logo-central-container {
     display: flex;
@@ -78,7 +66,7 @@ body {
     line-height: 1.1;
 }
 
-/* Fix header row positioning */
+/* Header row positioning */
 .header-container .w3-row {
     position: relative;
     width: 100%;
@@ -192,76 +180,6 @@ body {
     color: var(--color-blanco) !important;
 }
 
-/* Dropdown desktop - Enhanced functionality */
-.w3-dropdown-hover {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content-desktop {
-    background-color: var(--color-blanco) !important;
-    min-width: 220px;
-    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 9999;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    display: none;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
-
-.dropdown-content-desktop.show {
-    display: block !important;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.dropdown-content-desktop .nav-subitem {
-    color: var(--color-azul) !important;
-    background-color: var(--color-blanco) !important;
-    padding: 12px 20px !important;
-    display: block;
-    text-decoration: none;
-    border-bottom: 1px solid #f0f0f0;
-    transition: all 0.3s ease;
-    font-size: 14px;
-}
-
-.dropdown-content-desktop .nav-subitem:last-child {
-    border-bottom: none;
-}
-
-.dropdown-content-desktop .nav-subitem:hover {
-    background-color: var(--color-rojo) !important;
-    color: var(--color-blanco) !important;
-    padding-left: 25px !important;
-}
-
-/* Desktop dropdown button styling */
-.navigation-desktop .nav-item.dropdown-toggle {
-    position: relative;
-    cursor: pointer;
-}
-
-.navigation-desktop .nav-item.dropdown-toggle::after {
-    content: '';
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-}
-
-.navigation-desktop .nav-item.dropdown-toggle.active::after {
-    transform: rotate(180deg);
-}
-
-.navigation-desktop .nav-item.dropdown-toggle:hover {
-    background-color: var(--color-rojo) !important;
-}
-
 /* Carrusel */
 .carousel-container {
     position: relative;
@@ -278,6 +196,7 @@ body {
     display: none;
     height: 100%;
     width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .carousel-slide.active {
@@ -324,11 +243,6 @@ body {
     opacity: 0.95;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     line-height: 1.4;
-}
-
-/* Remove carousel captions */
-.carousel-caption {
-    display: none;
 }
 
 .carousel-btn {
@@ -464,10 +378,6 @@ main {
 }
 
 /* Animaciones */
-.carousel-slide {
-    animation: fadeIn 0.5s ease-in-out;
-}
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -480,20 +390,6 @@ main {
 
 .w3-text-red {
     color: var(--color-rojo) !important;
-}
-
-/* Estilos para cuando no hay imágenes */
-.carousel-image[src*="assets/images/"]:not([src]) {
-    background-color: var(--color-gris);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-blanco);
-    font-size: 18px;
-}
-
-.carousel-image[src*="assets/images/"]:not([src])::before {
-    content: "Imagen del carrusel";
 }
 
 /* Contacto - Enhanced styling */
@@ -676,7 +572,7 @@ main {
     font-weight: 500;
 }
 
-/* Servicios - Enhanced W3.CSS compatible styling */
+/* Servicios - Enhanced styling */
 .servicios-grid {
     display: flex;
     flex-wrap: wrap;
@@ -951,86 +847,175 @@ main {
     color: var(--color-azul);
 }
 
-/* Header - Mobile First Design */
-.header-container {
-    border-bottom: 3px solid var(--color-rojo);
-    min-height: 80px;
-    display: flex;
-    align-items: center;
+/* ICPC Section - Complete image display */
+.icpc-image {
     width: 100%;
-    padding: 8px 12px !important;
-    margin: 0;
-    position: relative;
+    height: 300px;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
 }
 
-/* Mobile First - Logo sizing */
-.logo-memi, .logo-fcyt {
-    max-width: 100%;
-    height: auto;
-    max-height: 50px;
+.icpc-image:hover {
+    transform: scale(1.02);
+}
+
+.icpc-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-gris);
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px dashed #dee2e6;
+}
+
+.icpc-placeholder i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.4;
+    color: var(--color-azul);
+}
+
+.icpc-placeholder strong {
+    color: var(--color-azul);
+    font-size: 18px;
+    margin-bottom: 10px;
     display: block;
 }
 
-.logo-sansi {
-    max-height: 35px;
-    width: auto;
-    margin-bottom: 5px;
+.icpc-placeholder small {
+    font-size: 12px;
+    opacity: 0.7;
+    font-style: italic;
+    color: var(--color-gris);
 }
 
-/* Mobile Header Layout */
-.header-container .w3-row {
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 60px;
-}
-
-/* Logo MEMI - Mobile positioning */
-.header-container .w3-col:first-child {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex: 0 0 25%;
-    padding-right: 5px;
-}
-
-.logo-memi {
-    margin: 0;
-    max-width: 90%;
-}
-
-/* Logo FCyT - Mobile positioning */
-.header-container .w3-col:last-child {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex: 0 0 25%;
-    padding-left: 5px;
-}
-
-.logo-fcyt {
-    margin: 0;
-    max-width: 90%;
-}
-
-/* Central container - Mobile */
-.header-container .w3-col:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    padding: 0 8px;
-}
-
-.logo-central-container {
+/* Publicaciones Section - Single column layout */
+.publicaciones-grid {
     display: flex;
     flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.publicacion-item {
+    width: 100%;
+}
+
+.publicacion-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0;
+}
+
+.publicacion-item:hover .publicacion-image {
+    transform: scale(1.02);
+}
+
+.publicacion-placeholder {
+    width: 100%;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    flex-direction: column;
+    color: var(--color-gris);
+    font-size: 16px;
     text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 2px dashed #dee2e6;
+}
+
+.publicacion-placeholder i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.4;
+    color: var(--color-azul);
+}
+
+.publicacion-placeholder strong {
+    color: var(--color-azul);
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.publicacion-placeholder p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.publicacion-placeholder small {
+    font-size: 12px;
+    opacity: 0.7;
+    font-style: italic;
+    color: var(--color-gris);
+    margin-top: 10px;
+    display: block;
+}
+
+/* Google Maps embed styling */
+.google-maps-embed {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 0;
+    display: block;
+}
+
+/* YouTube Video Container */
+.video-container {
+    background-color: var(--color-blanco);
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.video-header {
+    background-color: var(--color-rojo);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.video-header h4 {
+    margin: 0;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.video-content {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.youtube-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Responsive - Tablet (601px and up) */
@@ -1083,6 +1068,19 @@ main {
     .welcome-content {
         padding: 50px 30px;
     }
+    
+    .contacto-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .mapa-container {
+        grid-column: 1 / -1;
+    }
+    
+    .google-maps-embed {
+        height: 350px;
+    }
 }
 
 /* Responsive - Desktop (993px and up) */
@@ -1115,11 +1113,6 @@ main {
         flex: 0 0 25%;
     }
     
-    .header-container .w3-col:nth-child(2) {
-        flex: 1;
-        padding: 0 15px;
-    }
-    
     .carousel-wrapper {
         height: 500px;
     }
@@ -1134,6 +1127,25 @@ main {
     
     .welcome-content {
         padding: 60px 40px;
+    }
+    
+    .contacto-grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 30px;
+    }
+    
+    .mapa-container {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+    
+    .google-maps-embed {
+        height: 400px;
+    }
+    
+    .publicaciones-grid {
+        max-width: 900px;
+        gap: 40px;
     }
 }
 
@@ -1167,50 +1179,38 @@ main {
     .header-container .w3-col:nth-child(2) {
         padding: 0 5px;
     }
+    
+    .publicaciones-grid {
+        max-width: 100%;
+        padding: 10px;
+        gap: 20px;
+    }
+    
+    .publicacion-placeholder {
+        min-height: 250px;
+        padding: 30px 15px;
+    }
 }
 
-/* ICPC Section - Complete image display */
-.icpc-image {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    object-position: center;
-    background-color: #f8f9fa;
-    transition: transform 0.3s ease;
-}
+/* Dropdown desktop - Enhanced functionality - Eliminado código obsoleto y redundante */
 
-.icpc-image:hover {
-    transform: scale(1.02);
-}
-
-.icpc-placeholder {
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+/* Estilos para cuando no hay imágenes */
+.carousel-image[src*="assets/images/"]:not([src]) {
+    background-color: var(--color-gris);
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    color: var(--color-gris);
-    font-size: 16px;
-    text-align: center;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px dashed #dee2e6;
-}
-
-.icpc-placeholder i {
-    font-size: 64px;
-    margin-bottom: 20px;
-    opacity: 0.4;
-    color: var(--color-azul);
-}
-
-.icpc-placeholder strong {
-    color: var(--color-azul);
+    color: var(--color-blanco);
     font-size: 18px;
-    margin-bottom: 10px;
-    display: block;
+}
+
+.carousel-image[src*="assets/images/"]:not([src])::before {
+    content: "Imagen del carrusel";
+}
+
+/* Google Maps embed styling - Ya está incluido anteriormente */
+
+/* YouTube Video Container - Ya está incluido anteriormente */
 }
 
 .icpc-placeholder small {
