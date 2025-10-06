@@ -217,13 +217,14 @@ body {
 }
 
 .carousel-wrapper {
-    height: 300px;
+    height: 400px;
     overflow: hidden;
 }
 
 .carousel-slide {
     display: none;
     height: 100%;
+    width: 100%;
 }
 
 .carousel-slide.active {
@@ -233,50 +234,59 @@ body {
 .carousel-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f5f5f5;
 }
 
 /* Slide de bienvenida */
 .welcome-slide {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--color-azul) 0%, #00A693 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .welcome-content {
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
+    z-index: 2;
+    position: relative;
 }
 
 .welcome-title {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: bold;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    line-height: 1.2;
 }
 
 .welcome-subtitle {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 300;
-    opacity: 0.9;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    opacity: 0.95;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    line-height: 1.4;
 }
 
+/* Remove carousel captions */
 .carousel-caption {
-    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    display: none;
 }
 
 .carousel-btn {
-    background-color: rgba(0,0,0,0.5) !important;
+    background-color: rgba(0,0,0,0.6) !important;
     color: var(--color-blanco) !important;
     border: none !important;
-    padding: 10px 15px !important;
-    font-size: 18px;
+    padding: 12px 18px !important;
+    font-size: 20px;
     cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
 .carousel-btn:hover {
@@ -1004,6 +1014,22 @@ main {
         flex: 1;
         padding: 0 15px;
     }
+    
+    .carousel-wrapper {
+        height: 450px;
+    }
+    
+    .welcome-title {
+        font-size: 40px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 22px;
+    }
+    
+    .welcome-content {
+        padding: 50px 30px;
+    }
 }
 
 /* Responsive - Desktop (993px and up) */
@@ -1034,6 +1060,22 @@ main {
     .header-container .w3-col:first-child,
     .header-container .w3-col:last-child {
         flex: 0 0 25%;
+    }
+    
+    .carousel-wrapper {
+        height: 500px;
+    }
+    
+    .welcome-title {
+        font-size: 52px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 24px;
+    }
+    
+    .welcome-content {
+        padding: 60px 40px;
     }
 }
 
@@ -1106,7 +1148,21 @@ main {
         padding: 0 15px;
     }
     
-    /* ...existing code... */
+    .carousel-wrapper {
+        height: 450px;
+    }
+    
+    .welcome-title {
+        font-size: 40px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 22px;
+    }
+    
+    .welcome-content {
+        padding: 50px 30px;
+    }
 }
 
 /* Responsive - Desktop (993px and up) */
@@ -1139,7 +1195,21 @@ main {
         flex: 0 0 25%;
     }
     
-    /* ...existing code... */
+    .carousel-wrapper {
+        height: 500px;
+    }
+    
+    .welcome-title {
+        font-size: 52px;
+    }
+    
+    .welcome-subtitle {
+        font-size: 24px;
+    }
+    
+    .welcome-content {
+        padding: 60px 40px;
+    }
 }
 
 /* Extra responsive adjustments for very small screens */
@@ -1174,4 +1244,7 @@ main {
     }
 }
 
-/* ...existing code... */
+/* Fallback for missing background image */
+.welcome-slide:not([style*="background-image"]) {
+    background: linear-gradient(135deg, var(--color-azul) 0%, #00A693 100%);
+}
