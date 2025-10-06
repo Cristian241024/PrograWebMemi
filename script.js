@@ -6,6 +6,7 @@ let slideTimer;
 document.addEventListener('DOMContentLoaded', function() {
     initializeCarousel();
     startAutoSlide();
+    handleVideoAutoplay();
 });
 
 // Funciones del menú de navegación
@@ -208,3 +209,30 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
+// Video autoplay when visible (Intersection Observer)
+function handleVideoAutoplay() {
+    const video = document.querySelector('.youtube-video');
+    
+    if (video) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Video is visible, ensure autoplay
+                    const currentSrc = video.src;
+                    if (!currentSrc.includes('autoplay=1')) {
+                        video.src = currentSrc.replace('autoplay=0', 'autoplay=1');
+                    }
+                } else {
+                    // Video is not visible, pause autoplay
+                    const currentSrc = video.src;
+                    video.src = currentSrc.replace('autoplay=1', 'autoplay=0');
+                }
+            });
+        }, {
+            threshold: 0.5 // Video needs to be 50% visible
+        });
+        
+        observer.observe(video);
+    }
+}
