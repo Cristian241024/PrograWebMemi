@@ -192,21 +192,74 @@ body {
     color: var(--color-blanco) !important;
 }
 
-/* Dropdown desktop */
+/* Dropdown desktop - Enhanced functionality */
+.w3-dropdown-hover {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content-desktop {
     background-color: var(--color-blanco) !important;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 220px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-content-desktop.show {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .dropdown-content-desktop .nav-subitem {
     color: var(--color-azul) !important;
     background-color: var(--color-blanco) !important;
+    padding: 12px 20px !important;
+    display: block;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.dropdown-content-desktop .nav-subitem:last-child {
+    border-bottom: none;
 }
 
 .dropdown-content-desktop .nav-subitem:hover {
     background-color: var(--color-rojo) !important;
     color: var(--color-blanco) !important;
+    padding-left: 25px !important;
+}
+
+/* Desktop dropdown button styling */
+.navigation-desktop .nav-item.dropdown-toggle {
+    position: relative;
+    cursor: pointer;
+}
+
+.navigation-desktop .nav-item.dropdown-toggle::after {
+    content: '';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.navigation-desktop .nav-item.dropdown-toggle.active::after {
+    transform: rotate(180deg);
+}
+
+.navigation-desktop .nav-item.dropdown-toggle:hover {
+    background-color: var(--color-rojo) !important;
 }
 
 /* Carrusel */
@@ -1249,5 +1302,98 @@ main {
     
     .google-maps-embed {
         height: 400px;
+    }
+}
+
+/* Publicaciones Section - Single column layout */
+.publicaciones-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.publicacion-item {
+    width: 100%;
+}
+
+.publicacion-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+    border-radius: 12px 12px 0 0;
+}
+
+.publicacion-item:hover .publicacion-image {
+    transform: scale(1.02);
+}
+
+.publicacion-placeholder {
+    width: 100%;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color-gris);
+    font-size: 16px;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 12px;
+    border: 2px dashed #dee2e6;
+}
+
+.publicacion-placeholder i {
+    font-size: 64px;
+    margin-bottom: 20px;
+    opacity: 0.4;
+    color: var(--color-azul);
+}
+
+.publicacion-placeholder strong {
+    color: var(--color-azul);
+    font-size: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.publicacion-placeholder p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.publicacion-placeholder small {
+    font-size: 12px;
+    opacity: 0.7;
+    font-style: italic;
+    color: var(--color-gris);
+    margin-top: 10px;
+    display: block;
+}
+
+/* Responsive adjustments for publications */
+@media (max-width: 768px) {
+    .publicaciones-grid {
+        max-width: 100%;
+        padding: 10px;
+        gap: 20px;
+    }
+    
+    .publicacion-placeholder {
+        min-height: 250px;
+        padding: 30px 15px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .publicaciones-grid {
+        max-width: 900px;
+        gap: 40px;
     }
 }

@@ -58,17 +58,7 @@
 
         <div class="w3-hide-small navigation-desktop">
             <a href="#mision-vision" class="w3-bar-item w3-button nav-item">Misión Visión Valores</a>
-            <div class="w3-dropdown-hover">
-                <button class="w3-button nav-item">
-                    Acerca de <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4 dropdown-content-desktop">
-                    <a href="#antecedentes" class="w3-bar-item w3-button nav-subitem">Antecedentes</a>
-                    <a href="#datos-historicos" class="w3-bar-item w3-button nav-subitem">Datos históricos</a>
-                    <a href="#organigrama" class="w3-bar-item w3-button nav-subitem">Organigrama</a>
-                    <a href="#autoridades" class="w3-bar-item w3-button nav-subitem">Autoridades</a>
-                </div>
-            </div>
+            <a href="#antecedentes" class="w3-bar-item w3-button nav-item">Acerca de</a>
             <a href="#cursos-seminarios" class="w3-bar-item w3-button nav-item">Cursos / Seminarios</a>
             <a href="#publicaciones" class="w3-bar-item w3-button nav-item">Publicaciones</a>
             <a href="#servicios" class="w3-bar-item w3-button nav-item">Servicios</a>
@@ -368,11 +358,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                                         </div>
                                     </div>
                                 </div>
-                                <div class="w3-center w3-margin-top">
-                                    <button class="w3-button w3-large w3-blue w3-round">
-                                        <i class="fas fa-phone w3-margin-right"></i>Contactar para más información
-                                    </button>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -383,7 +369,60 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
         <section id="publicaciones" class="w3-row-padding w3-margin-bottom">
             <div class="w3-container">
                 <h2 class="w3-text-blue section-title">Publicaciones</h2>
-                <p class="w3-text-grey">Artículos científicos, papers y documentos de investigación...</p>
+                <p class="w3-text-grey w3-large w3-center" style="margin-bottom: 40px;">
+                    <strong>Conoce nuestras últimas publicaciones y anuncios</strong>
+                </p>
+                
+                <!-- Galería de Publicaciones en una columna -->
+                <div class="publicaciones-grid">
+                    <!-- Publicación 1 - Anuncio 1 -->
+                    <div class="publicacion-item w3-margin-bottom">
+                        <div class="w3-card-4 w3-round-large w3-hover-shadow">
+                            <img src="assets/images/carousel/anuncio-1.png" alt="Publicación 1 - Investigación de Vanguardia" class="publicacion-image" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="publicacion-placeholder" style="display: none;">
+                                <i class="fas fa-image"></i>
+                                <div>
+                                    <strong>Publicación 1</strong>
+                                    <p>Investigación de Vanguardia</p>
+                                    <small>Imagen: assets/images/carousel/anuncio-1.png</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publicación 2 - Anuncio 2 -->
+                    <div class="publicacion-item w3-margin-bottom">
+                        <div class="w3-card-4 w3-round-large w3-hover-shadow">
+                            <img src="assets/images/carousel/anuncio-2.png" alt="Publicación 2 - Formación Académica" class="publicacion-image" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="publicacion-placeholder" style="display: none;">
+                                <i class="fas fa-image"></i>
+                                <div>
+                                    <strong>Publicación 2</strong>
+                                    <p>Formación Académica</p>
+                                    <small>Imagen: assets/images/carousel/anuncio-2.png</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Publicación 3 - Anuncio 3 -->
+                    <div class="publicacion-item w3-margin-bottom">
+                        <div class="w3-card-4 w3-round-large w3-hover-shadow">
+                            <img src="assets/images/carousel/anuncio-3.jpg" alt="Publicación 3 - Cursos y Seminarios" class="publicacion-image" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="publicacion-placeholder" style="display: none;">
+                                <i class="fas fa-image"></i>
+                                <div>
+                                    <strong>Publicación 3</strong>
+                                    <p>Cursos y Seminarios</p>
+                                    <small>Imagen: assets/images/carousel/anuncio-3.jpg</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -452,23 +491,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                             <p class="servicio-description">
                                 Facilitamos nuestros ambientes e infraestructura para conferencias, seminarios, talleres, conversatorios con profesionales destacados locales o extranjeros, que quieran compartir sus experiencias y conocimientos con profesionales y estudiantes de nuestra universidad.
                             </p>
-                            <div class="servicio-features w3-panel">
-                                <p><i class="fas fa-star w3-text-amber"></i> Disponemos de:</p>
-                                <div class="feature-list">
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-users"></i>
-                                        <span>Dos salas de 40 personas c/u</span>
-                                    </div>
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-desktop"></i>
-                                        <span>Data display</span>
-                                    </div>
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-chalkboard"></i>
-                                        <span>Pizarras equipadas</span>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -484,23 +507,7 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
                             <p class="servicio-description">
                                 Disponemos de dos ambientes cómodos para defensas públicas, cursos, seminarios, talleres, de carácter privado, con todo el equipamiento para el éxito de sus eventos.
                             </p>
-                            <div class="servicio-features w3-panel">
-                                <p><i class="fas fa-check-circle w3-text-green"></i> Incluye:</p>
-                                <div class="feature-list">
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Capacidad: 40 personas</span>
-                                    </div>
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Equipamiento completo</span>
-                                    </div>
-                                    <div class="feature-item w3-tag w3-white w3-border">
-                                        <i class="fas fa-check-circle"></i>
-                                        <span>Ambientes privados</span>
-                                    </div>
-                                </div>
-                            </div>
+                         
                         </div>
                     </div>
                 </div>
@@ -725,4 +732,5 @@ A partir del 2010, mediante Resolución Rectoral N° 389/10, el Programa MEMI ad
 
     <script src="script.js"></script>
 </body>
+
 
